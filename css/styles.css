@@ -219,9 +219,12 @@ img {
 }
 
 .primary-button {
-    border-radius: 4px;
+    display: flex;
+    align-items: center;
     padding: 10px 32px;
     min-width: 216px;
+    margin-left: auto;
+    margin-right: auto;
 
     background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -234,6 +237,26 @@ img {
     color: var(--header-background-color);
     border: transparent;
     cursor: pointer;
+    border-radius: 4px;
+}
+
+.primary-button::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    align-items: center;
+    margin-right: 10px;
+
+    background-color: crimson;
+
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+}
+
+.primary-button:hover::before {
+    transform: translateY(-35px);
 }
 
 /* Переваги */
