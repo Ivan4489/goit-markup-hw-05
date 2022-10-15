@@ -220,6 +220,7 @@ img {
 
 .primary-button {
     position: relative;
+    overflow: hidden;
 
     display: flex;
     align-items: center;
@@ -259,7 +260,7 @@ img {
 
 .primary-button::after {
     position: absolute;
-    transform: translateX(-10px) translateY(35px);
+    transform: translateX(-10px) translateY(50px);
     
     content: '';
     width: 30px;
@@ -276,7 +277,7 @@ img {
 }
 
 .primary-button:hover::before {
-    transform: translateY(-35px);
+    transform: translateY(-50px);
 }
 
 .primary-button:hover::after {
