@@ -219,6 +219,8 @@ img {
 }
 
 .primary-button {
+    position: relative;
+
     display: flex;
     align-items: center;
     padding: 10px 32px;
@@ -255,8 +257,30 @@ img {
     transition-timing-function: linear;
 }
 
+.primary-button::after {
+    position: absolute;
+    transform: translateX(-10px) translateY(35px);
+    
+    content: '';
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    align-items: center;
+    margin-left: 10px;
+
+    background-color: yellow;
+
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+}
+
 .primary-button:hover::before {
     transform: translateY(-35px);
+}
+
+.primary-button:hover::after {
+    transform: translateX(-10px);
 }
 
 /* Переваги */
