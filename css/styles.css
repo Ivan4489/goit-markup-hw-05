@@ -736,6 +736,15 @@ img {
   height: 100%;
 
   background-color: var(--backdrop-color);
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .modal {
@@ -769,6 +778,7 @@ img {
   background-color: transparent;
   border: 1px solid var(--close-border-color);
   color: var(--logo-black-color);
+  cursor: pointer;
 }
 
 .close-icon {
